@@ -68,7 +68,7 @@ jobs:
           key: wasm-${{ hashFiles('Cargo.lock') }}-${{ hashFiles('./src') }}-${{ hashFiles('./launchers') }}
       - name: Install Trunk
         if: steps.cache-build.outputs.cache-hit != 'true'
-        uses: jetli/trunk-action@v0.1.0
+        uses: jetli/trunk-action@v0.5.1
         with:
           version: "latest"
       - name: Trunk Build
